@@ -1,0 +1,1536 @@
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\use_mhchem 1
+\use_mathdots 1
+\cite_engine basic
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\use_refstyle 1
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Batería de Aire.
+\end_layout
+
+\begin_layout Author
+Claudio Acuña, Cristián Garrido, Guillermo Rojas.
+\end_layout
+
+\begin_layout Date
+XX Junio 2013
+\end_layout
+
+\begin_layout Abstract
+La batería virtual es una software que consiste permitir al usuario poder
+ tocar una batería mediante el uso de un pc y herramientas adicionales (kinect
+ y arduino) para poder emularla y darle la sensación al usuario de poder
+ estar tocar una real, sin la necesidad de gastar tanto dinero comprando
+ o arreglando una.
+\end_layout
+
+\begin_layout Abstract
+Kinect es un hardware que tiene la opción de reconocimiento que le permitirá
+ al usuario poder tocar dicha batería y ver cómo la toca, así no sólo el
+ usuario toca una batería sino que también podrá verse sumergido así mismo
+ tocarla dándole una gran sensación de participación.
+\end_layout
+
+\begin_layout Abstract
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introducción.
+\end_layout
+
+\begin_layout Standard
+Hoy en día, la conexión con la música, es mucho más potente que en antaño.
+ Antes tener música disponible y de calidad, era un lujo que sólo terratenientes
+, generales y realeza podían costear.
+ En la actualidad, sabemos que basta con un par de clicks.
+ 
+\end_layout
+
+\begin_layout Standard
+Ahora tener música a la mano, es un privilegio de muchos, pero ¿somos todos
+ capaces de generarla? Claramente no, sólo unos pocos privilegiados son
+ capaces de crear y reproducir música de calidad.
+ 
+\end_layout
+
+\begin_layout Quote
+A la guitarra se le sacan notas, no lágrimas 
+\end_layout
+
+\begin_layout Quotation
+(Don Ramón).
+\end_layout
+
+\begin_layout Standard
+En el presente hay diversos entornos y situaciones, capaces de emular situacione
+s e instrumentos musicales tales como: TuxGuitar, Controladores MIDI, Fruitloops
+, VirtualPiano, Dance Dance Revolution, Pump it up, Beatmanía Guitar Hero,
+ entre tantos otros.
+\end_layout
+
+\begin_layout Standard
+Hoy en día la música nos sugiere que mientras más participativa y amigable
+ sea con su medio, más agradable y adaptable se volverá hacia usuario.
+ Mientras más inmerso se encuentre en su mundo, mejor respuesta esperamos
+ de él.
+\end_layout
+
+\begin_layout Standard
+Más de alguna vez, hemos imitado a nuestros artistas mientras escuchamos
+ sus canciones; surfear en público, tocar guitarras y baterías de aire...
+ ¿es genial no? Nos sentimos vivos, donde se recrea ser un miembro más de
+ la banda donde toca la música en vivo en frente de miles de personas, y
+ nos sumergimos dentro de nuestra imaginación.
+ Pero...
+ ¿podremos algún día recrear estas situaciones moviendo simplemente nuestras
+ manos? ¡Pues sí ese día ya llegó!
+\end_layout
+
+\begin_layout Standard
+Esta situación era impensable 20 años atrás, pero todos sabemos que la realidad
+ supera la ficción y es por esto que ayudados por el software y el hardware
+ contemporáneo hemos logrado emular una batería “completamente de aire”.
+\end_layout
+
+\begin_layout Section
+Objetivos
+\end_layout
+
+\begin_layout Standard
+Construcción, configuración de una batería virtual, mediante la cual el
+ usuario sea capaz de poder sentir como si realmente estuviese tocando una
+ bateria real, mediante las tecnologías necesarias.
+\end_layout
+
+\begin_layout Section
+Marco Teórico.
+\end_layout
+
+\begin_layout Standard
+Bajo el tema de las tecnologías, las cuales tienen mucha interacción con
+ el usuario, los desarrolladores se han apoyado en el siguiente software:
+\end_layout
+
+\begin_layout Itemize
+Processing: Es un lenguaje de programación, entorno de desarrollo, y la
+ comunitario en línea.
+ Desde el año 2001, Processing ha promovido la alfabetización de software
+ dentro de las artes visuales y la alfabetización visual dentro de la tecnología.
+ Inicialmente creado para servir como un cuaderno de bocetos de software
+ y para enseñar los fundamentos de programación de computadoras dentro de
+ un contexto visual, Processing se ha convertido en una herramienta de desarroll
+o para los profesionales.
+ Hoy en día, hay decenas de miles de estudiantes, artistas, diseñadores,
+ investigadores y aficionados que utilizan procesamiento para el aprendizaje,
+ creación de prototipos y producción.
+\end_layout
+
+\begin_layout Itemize
+Wiimote: Wii Remote es el mando principal de la consola Wii de Nintendo,
+ el cual también es compatible con la consola Wii U.
+ Sus características más destacables son la capacidad de detección de movimiento
+ en el espacio y la habilidad de apuntar hacia objetos en la pantalla.
+ El diseño del Wii Remote no se basa en los tradicionales mandos para los
+ videojuegos.
+ A diferencia de ellos, es similar a un control remoto de televisión, creado
+ para ser utilizado en una sola mano y de la manera más intuitiva posible.
+ En su cara frontal, el Wiimote presenta los botones "A", "1", "2", "+",
+ "-", "HOME" y la cruz de direcciones, más un botón "POWER" para apagar
+ la consola, algo inédito hasta entonces.
+ En la parte anterior sólo presenta el botón "B", en un formato similar
+ a un gatillo.
+ Además, en su parte frontal incluye un altavoz y cuatro luces numeradas
+ que indican el número de jugador al que corresponde tal mando y ver el
+ tiempo de vida de la batería.
+ En la parte inferior se encuentra el puerto de expansión del mando y viene
+ unida una correa de seguridad que se amarra a la muñeca para evitar soltar
+ y dañar el control de forma accidental.
+\end_layout
+
+\begin_layout Itemize
+Arduino: Es una plataforma de electrónica abierta para la creación de prototipos
+ basada en software y hardware flexibles y fáciles de usar.
+ Se creó para artistas, diseñadores, aficionados y cualquiera interesado
+ en crear entornos u objetos interactivos.
+ Arduino puede tomar información del entorno a través de sus pines de entrada
+ de toda una gama de sensores y puede afectar aquello que le rodea controlando
+ luces, motores y otros actuadores.
+ El microcontrolador en la placa Arduino se programa mediante el lenguaje
+ de programación Arduino (basado en Wiring) y el entorno de desarrollo Arduino
+ (basado en Processing).
+ Los proyectos hechos con Arduino pueden ejecutarse sin necesidad de conectar
+ a un ordenador, si bien tienen la posibilidad de hacerlo y comunicar con
+ diferentes tipos de software (p.ej.
+ Flash, Processing, MaxMSP).
+ Las placas pueden ser hechas a mano o compradas montadas de fábrica; el
+ software puede ser descargado de forma gratuita.
+ Los ficheros de diseño de referencia (CAD) están disponibles bajo una licencia
+ abierta, así pues eres libre de adaptarlos a tus necesidades.
+ Arduino recibió una Mención Honorífica en la sección Digital Communities
+ de la edición del 2006 del Ars Electronica Prix.
+ El equipo Arduino (Arduino team) es: Massimo Banzi, David Cuartielles,
+ Tom Igoe, Gianluca Martino, and David Mellis
+\end_layout
+
+\begin_layout Itemize
+Kinect: Kinect para Xbox 360, o simplemente Kinect (originalmente conocido
+ por el nombre EN clave Project Natal), es un controlador de juegos libre
+ y entretenimiento creado por Alex Kipman, desarrollado por Microsoft para
+ la videoconsola Xbox 360, y desde junio del 2011 para PC a través de Windows
+ 7 y Windows 8.
+ Kinect permite a los usuarios controlar e interactuar con la consola sin
+ necesidad de tener contacto físico con un controlador de videojuegos tradiciona
+l, mediante una interfaz natural de usuario que reconoce gestos, comandos
+ de voz, y objetos e imágenes.
+ El dispositivo tiene como objetivo primordial aumentar el uso de la Xbox
+ 360, más allá de la base de jugadores que posee en la actualidad.
+ En sí, Kinect compite con los sistemas Wiimote con Wii MotionPlus y PlayStation
+ Move, que también controlan el movimiento para las consolas Wii y PlayStation
+ 3, respectivamente.
+\end_layout
+
+\begin_layout Itemize
+Cualquier computadora con un sistema operativo; windows 7 o superior, GNU/Linux
+ (cualquierda de sus distros)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Las cuales por razones más adelante abandonamos
+\end_layout
+
+\end_inset
+
+ de 32 ó 64 bits.
+\end_layout
+
+\begin_layout Section
+Materiales utilizados
+\end_layout
+
+\begin_layout Itemize
+Placa de Desarrollo Arduino uno-R3
+\end_layout
+
+\begin_layout Itemize
+Cable USB (A-B)
+\end_layout
+
+\begin_layout Itemize
+Protoboard
+\end_layout
+
+\begin_layout Itemize
+Leds Infrarrojos
+\end_layout
+
+\begin_layout Itemize
+Wiimote
+\end_layout
+
+\begin_layout Itemize
+Canaleta de luz
+\end_layout
+
+\begin_layout Itemize
+Pulsadores
+\end_layout
+
+\begin_layout Itemize
+Resistor (10 Kohm)
+\end_layout
+
+\begin_layout Itemize
+Banda elástica
+\end_layout
+
+\begin_layout Section
+Procedimiento experimental:
+\end_layout
+
+\begin_layout Subsection
+La “no solución”
+\end_layout
+
+\begin_layout Standard
+En primera instancia, coincidimos que era mucho más factible, realizar este
+ proyecto, basándonos en la utilización de wiimote+nunchuck, siendo éstos
+ la emulación de las baquetas, dando una experiencia mucho más real.
+\end_layout
+
+\begin_layout Standard
+Utilizando las librerías Cwid en conjunto con wmgui y la transferencia de
+ datos por bluetooth(BlueZ).
+ Para una mejor captación de movimiento se procede a construir un senso-bar
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:Senso-bar"
+
+\end_inset
+
+ para poder tener una mejor conexión entre el wiimote y la computadora.
+ Dicha barra, consiste básicamente en colocar 4 leds infrarrojos, siendo
+ alimentados por una computadora por medio de un cable usb.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+(Insertar foto del senso bar)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename sensobar.jpg
+	width 100text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Senso Bar
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:Senso-bar"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Cómo hacer un sensorbar"
+target "http://www.taringa.net/posts/ebooks-tutoriales/4740336/Hacer-Barra-Sensora-casera-USB-para-Wii-sensor-bar.html"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego se empezó a identificar los distintos medios(lenguajes de programación
+ y librerías), para poder realizar un sencilla aplicación para wiimote y
+ así a través de estos datos recopilados poder a la construcción en bruto
+ de nuestra batería virtual.
+ Donde la búsqueda exhaustiva, lograron sus primeros frutos pudiendo identificar
+ un IDE amigable con el usuario(Programadores o Creadores), basada en java
+ llamada “Processing”, donde a través de ella se podrá realizar tanto el
+ diseño como el funcionamiento en sí (codigo fuente), a continuación se
+ procedió a ver de qué manera se podría conectar nuestra IDE con wiimote,
+ donde una vez más se requirió de los buscadores de internet para encontrar
+ una librería.
+ Afortunadamente existen muchas librerías en lenguajes diferentes, pero
+ que no eran amigable con la IDE a utilizar, después de una larga búsqueda
+ se logró llegar con una en especifica llamada (No me acuerdo Berracos )
+ , logrando su instalación correspondiente(Link guia de instalación) y ejecutand
+o un simple ejemplo de prueba se pudo lograr con efectividad conectar nuestro
+ wiimote con processing y desarrollar un simple ejemplo.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "basicstyle={\scriptsize\sffamily},breaklines=true,extendedchars=true,language={[AspectJ]Java},numbers=left,numberstyle={\footnotesize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import ddf.minim.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+import lll.Loc.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+import lll.wrj4P5.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+Wrj4P5 wii;
+\end_layout
+
+\begin_layout Plain Layout
+
+Minim minim;
+\end_layout
+
+\begin_layout Plain Layout
+
+Minim mini;
+\end_layout
+
+\begin_layout Plain Layout
+
+AudioPlayer bmusic;
+\end_layout
+
+\begin_layout Plain Layout
+
+AudioPlayer playe;
+\end_layout
+
+\begin_layout Plain Layout
+
+int spazio=50;
+\end_layout
+
+\begin_layout Plain Layout
+
+int value;
+\end_layout
+
+\begin_layout Plain Layout
+
+void setup() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  size(300,300,P3D);
+\end_layout
+
+\begin_layout Plain Layout
+
+  wii=new Wrj4P5(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+  wii.connect();
+\end_layout
+
+\begin_layout Plain Layout
+
+  minim= new Minim(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+  mini= new Minim(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+  bmusic = minim.loadFile("Crash.wav", 1024);
+\end_layout
+
+\begin_layout Plain Layout
+
+  playe = mini.loadFile("LowTom.wav");
+\end_layout
+
+\begin_layout Plain Layout
+
+} 
+\end_layout
+
+\begin_layout Plain Layout
+
+void draw() {
+\end_layout
+
+\begin_layout Plain Layout
+
+  background(0);
+\end_layout
+
+\begin_layout Plain Layout
+
+  stroke(255);
+\end_layout
+
+\begin_layout Plain Layout
+
+  translate(100/1,200/1,0);
+\end_layout
+
+\begin_layout Plain Layout
+
+  lights();
+\end_layout
+
+\begin_layout Plain Layout
+
+  Loc p=wii.rimokon.irLights[0];
+\end_layout
+
+\begin_layout Plain Layout
+
+  Loc a=wii.rimokon.irLights[1];
+\end_layout
+
+\begin_layout Plain Layout
+
+  Loc b=wii.rimokon.irLights[2];
+\end_layout
+
+\begin_layout Plain Layout
+
+  Loc c=wii.rimokon.irLights[3];
+\end_layout
+
+\begin_layout Plain Layout
+
+  rotateX((int) (wii.rimokon.senced.x*5+10));
+\end_layout
+
+\begin_layout Plain Layout
+
+  rotateY((int) (wii.rimokon.senced.y*5+10));
+\end_layout
+
+\begin_layout Plain Layout
+
+  rotateZ((int) (wii.rimokon.senced.z*5+10));
+\end_layout
+
+\begin_layout Plain Layout
+
+  box(100,100,100);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+  
+\end_layout
+
+\begin_layout Plain Layout
+
+void buttonPressed(RimokonEvent evt, int rid) {
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.TWO)){ 
+\end_layout
+
+\begin_layout Plain Layout
+
+   //song= minim.loadFile("Crash.wav");
+\end_layout
+
+\begin_layout Plain Layout
+
+   //song.play();
+\end_layout
+
+\begin_layout Plain Layout
+
+   //value=1;
+\end_layout
+
+\begin_layout Plain Layout
+
+  //bmusic.rewind();
+\end_layout
+
+\begin_layout Plain Layout
+
+  //play the file
+\end_layout
+
+\begin_layout Plain Layout
+
+  bmusic.play();
+\end_layout
+
+\begin_layout Plain Layout
+
+  bmusic.rewind();
+\end_layout
+
+\begin_layout Plain Layout
+
+  //value=1;
+\end_layout
+
+\begin_layout Plain Layout
+
+ }
+\end_layout
+
+\begin_layout Plain Layout
+
+  if (evt.wasPressed(RimokonEvent.ONE)){
+\end_layout
+
+\begin_layout Plain Layout
+
+  //play the file
+\end_layout
+
+\begin_layout Plain Layout
+
+  //playe = minim.loadFile("LowTom.wav",1024);
+\end_layout
+
+\begin_layout Plain Layout
+
+  playe.play();
+\end_layout
+
+\begin_layout Plain Layout
+
+  playe.rewind(); 
+\end_layout
+
+\begin_layout Plain Layout
+
+   }
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.B)) println("B");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.A)) println("A");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.MINUS)) println("Minus");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.HOME)) println("Home");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.LEFT)) println("Left");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.RIGHT)) println("Right");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.DOWN)) println("Down");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.UP)) println("Up");
+\end_layout
+
+\begin_layout Plain Layout
+
+   if (evt.wasPressed(RimokonEvent.PLUS)) println("Plus");
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+void stop(){
+\end_layout
+
+\begin_layout Plain Layout
+
+  // always close Minim audio classes when you are done with them
+\end_layout
+
+\begin_layout Plain Layout
+
+  bmusic.close();
+\end_layout
+
+\begin_layout Plain Layout
+
+  playe.close();
+\end_layout
+
+\begin_layout Plain Layout
+
+  minim.stop();
+\end_layout
+
+\begin_layout Plain Layout
+
+  super.stop();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Tocar un sonido con un botón en Wii
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ahora es el turno de arduino.
+ Arduino es una placa de desarrollo que cuenta con su propia IDE, pero para
+ el desarrollo del proyecto se necesita que se conecte de igual forma con
+ processing para la futura construcción del pedal de bateria, donde se procedió
+ a la identificación de librerías correspondientes para processing y además
+ un código ejemplo de aplicaciones realizadas anteriormente.
+\end_layout
+
+\begin_layout Standard
+Ya dispuesto con las librerías anteriormente dichas y instaladas para el
+ funcionamiento del wiimote y arduino se procedió a la construcción de la
+ batería virtual y como primer objetivo identificar los botones del wiimote
+ con el objetivo final de que todos y cada uno de ellos podía efectuar un
+ sonido en específico los pasos para lograr el desarrollo de tal tarea fueron
+ los siguientes:
+\end_layout
+
+\begin_layout Standard
+Identificar cada unos de los botones referente a la representación mediante
+ código a través de Proccesing y la acciones que permitan el correcto funcionami
+ento para el proyecto en sí.
+\end_layout
+
+\begin_layout Standard
+Una vez identificada cada función correspondiente a cada botón se procede
+ a programar un sonido en específico, para esto se descargaron los diferentes
+ sonidos en .wav de tal manera de incorporarlos en cada función del botón.
+\end_layout
+
+\begin_layout Standard
+Una vez descargado y logrado el correcto funcionamiento de la funciones
+ de los botones se procede a ocupar la librería minin de sonido, la cual
+ viene instalada por defecto en proccesing y a través de ella lograr el
+ correcto manejo de sonidos con los botones del wiimote.
+\end_layout
+
+\begin_layout Standard
+En el código, se asigna a cada botón del control un sonido, es decir, cada
+ botón representará un tambor o platillo.
+ Los sonidos son designados arbitrariamente
+\end_layout
+
+\begin_layout Standard
+Es aquí en donde se hará una pausa en este punto, para efectuar un reporte
+ de un bug que no se pudo solucionar y conllevo a la paralización total
+ del proyecto de la batería virtual con baquetas usado el wiimote.
+ Lamentablemente la documentación de este bug es escasa y poco clara al
+ momento de solucionar el problema, cabe recalcar que la explicación que
+ se realizara a continuación que se produce en distribuciones linux que
+ tiene como base a ubuntu como por ejemplo, mint , kubuntu, ubuntu, y fedora
+ etc.
+ (Desconocemos si ocurre en Debian).
+\end_layout
+
+\begin_layout Standard
+Al momento de cargar el sonido en el void setup se produce el siguiente
+ error (foto).
+\end_layout
+
+\begin_layout Standard
+Se comenzó por revisar el codigo sexistíaia algún error de sintaxis o solamente
+ de la elaboración del algoritmo, donde se pudo identificar que el algoritmo
+ no era correcto, entonces se procedió a revisar el problema mediante los
+ buscadores de internet ubicando la falla en sí, identificándose como error
+ de comunicación entre la librería minin y el jdk de java.
+\end_layout
+
+\begin_layout Standard
+Se comenzó a buscar una solución para que el correcto funcionamiento del
+ código identificando que el problema solo era válido en distribuciones
+ que tienen como base a ubuntu.
+\end_layout
+
+\begin_layout Standard
+Finalmente se encontraron algunos fix que se dejan a continuación que se
+ aplicaron mediante terminal sin tener resultados fructíferos.
+\end_layout
+
+\begin_layout Standard
+Ya sin ninguna opción de arreglar el programa se procedió a probar diferentes
+ distribuciones de Sistemas operativos que no estuvieran basadas en ubuntu,
+ partiendo por Fedora.
+ Al momento de inicializar fedora e instalar todo lo correspondiente para
+ el funcionamiento del código lamentablemente lanzó el mismo error nuevamente.
+ Así que se decidió migrar a Windows.
+\end_layout
+
+\begin_layout Standard
+En windows nuevamente se instalaron las librerías correspondientes para
+ el funcionamiento del código, pero en esta circunstancia ahora no existía
+ el problema de la librería minin con java, ahora existía otro que era wiimote
+ con bluetooth donde la librería de Wiimote se nos hizo imposible establecer
+ una comunicación estable entre wiimotes y processing.
+\end_layout
+
+\begin_layout Subsection
+Solución con Kinect.
+\end_layout
+
+\begin_layout Subsubsection
+Logrando el objetivo:
+\end_layout
+
+\begin_layout Standard
+Debido a la ineficacia y poca productividad, por parte de un problemas de
+ licencias y bugs de librerías por parte de Linux(Ubuntu, Mint, y Fedora),
+ se decidió emigrar del wiimote para recaer sobre la máquina de Microsoft.
+\end_layout
+
+\begin_layout Standard
+Cambiando el paradigma de acelerómetros y secuencia de de botones, se enfocó
+ a la captura de movimiento.
+ Siendo ésta una solución más idónea y cómoda para el equipo de desarrolladores.
+\end_layout
+
+\begin_layout Standard
+Sentándose en los hombros de gigantes.
+\end_layout
+
+\begin_layout Standard
+Navegando por la web, se encontró con proyectos similares, a los cuales,
+ discutimos, modificamos, evolucionamos y evaluamos la mejor opción para
+ adaptarnos éste.
+\end_layout
+
+\begin_layout Standard
+Creación de un nuevo escenario:
+\end_layout
+
+\begin_layout Standard
+Para poder utilizar Kinect y processing es necesario instalar ciertos drivers
+ y librerías para que funcione conrrectamente
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Link de las librerías
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Simple-openni"
+target "http://code.google.com/p/simple-openni/"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset href
+LatexCommand href
+name "Processing 1.5.1"
+target "https://www.processing.org/download/?processing"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Luego de haberse configurado todo, procedemos a ejecutar e interpretar el
+ código (link).
+ Resulta bastante beneficioso para el equipo, que éste funciona, pero no
+ de una forma ideal propuesta en un principio.
+\end_layout
+
+\begin_layout Standard
+Añadiendo elementos:
+\end_layout
+
+\begin_layout Standard
+Ahora se procede a agregar un botón, de tipo pulsador, el cual será utilizado
+ con el pie, logrando una experiencia mucho más realista para el usuario-jugador.
+ Es aquí donde entra en juego Arduino 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "Flo:Circuito-boton"
+
+\end_inset
+
+.
+ Desde Processing, es posible llamar librerías capaces de conectarse con
+ Arduino.
+ Con esto dicho, se pudo establecer un puente de comunicación utilizando
+ el siguiente ejemplo:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset listings
+lstparams "basicstyle={\scriptsize},breaklines=true,extendedchars=true,language={[AspectJ]Java},numbers=left,numberstyle={\footnotesize}"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+import processing.serial.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+import cc.arduino.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+import ddf.minim.*;
+\end_layout
+
+\begin_layout Plain Layout
+
+AudioPlayer player;
+\end_layout
+
+\begin_layout Plain Layout
+
+Minim minim;
+\end_layout
+
+\begin_layout Plain Layout
+
+Arduino arduino;
+\end_layout
+
+\begin_layout Plain Layout
+
+int switchPin = 2;
+\end_layout
+
+\begin_layout Plain Layout
+
+void setup() {
+\end_layout
+
+\begin_layout Plain Layout
+
+minim = new Minim(this);
+\end_layout
+
+\begin_layout Plain Layout
+
+player = minim.loadFile("Bass.wav");
+\end_layout
+
+\begin_layout Plain Layout
+
+player.play();
+\end_layout
+
+\begin_layout Plain Layout
+
+smooth();
+\end_layout
+
+\begin_layout Plain Layout
+
+size(200, 200);
+\end_layout
+
+\begin_layout Plain Layout
+
+arduino = new Arduino(this, Arduino.list()[0], 57600);
+\end_layout
+
+\begin_layout Plain Layout
+
+arduino.pinMode(switchPin, Arduino.INPUT);
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+void draw() {
+\end_layout
+
+\begin_layout Plain Layout
+
+if(arduino.digitalRead(switchPin)==Arduino.LOW) { // Testea el estado de entrada
+ 2
+\end_layout
+
+\begin_layout Plain Layout
+
+background(255, 0, 0); // Si el estado es bajo, sin pulsar pone el fondo
+ rojo
+\end_layout
+
+\begin_layout Plain Layout
+
+} else {
+\end_layout
+
+\begin_layout Plain Layout
+
+background(0, 0, 0); // Si el estado es alto, pulsado pone fondo negro
+\end_layout
+
+\begin_layout Plain Layout
+
+player.rewind();
+\end_layout
+
+\begin_layout Plain Layout
+
+player.play();
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Obteniendo un sonido, por medio de arduino
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename circuito boton.jpg
+	lyxscale 10
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Circuito Boton
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "Flo:Circuito-boton"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+La diferencia que se estableció, con el ejemplo proporcionado por la web
+ de Arduino, fue que en vez de iluminar un led, reprodujera sonido de un
+ bombo de batería de 32”.
+\end_layout
+
+\begin_layout Section
+Resultado final.
+\end_layout
+
+\begin_layout Standard
+Una foto vale mil palabras, pero un 
+\begin_inset CommandInset href
+LatexCommand href
+name "video"
+target "http://youtu.be/qib120aztOE"
+
+\end_inset
+
+ vale mil fotos.
+\end_layout
+
+\begin_layout Section
+Código final.
+\end_layout
+
+\begin_layout Standard
+Puedes verlo 
+\begin_inset CommandInset href
+LatexCommand href
+name "aquí"
+target "https://code.google.com/p/air-drum-kinect-processing-arduino/"
+
+\end_inset
+
+ o 
+\begin_inset CommandInset href
+LatexCommand href
+name "acá"
+target "https://github.com/guillermoprojaslema/arduino.git"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Conclusión.
+\end_layout
+
+\begin_layout Standard
+Al concluir este proyecto se da cuenta de las grandes ventajas que provee
+ el IDE Processing para el manejo del arduino y la kinect para el propósito,
+ también se puede apreciar la gran fluidez del este lenguaje y a su vez
+ la kinect provee un gran manejo y control sobre el reconocimiento con la
+ camara que ésta posee para nuestro propósito y que con arduino se puede
+ abarcar mucho más de lo imaginado (el límite es la imaginacion).
+\end_layout
+
+\begin_layout Standard
+Se verifica que a pesar que la kinect al ser desarrollado por microsoft
+ se desenvuelve perfectamente en sistemas basados en unix (gnu/linux, mac),
+ mientras que arduino al ser un hardware libre no presentas problemas para
+ trabajar en cualquier S.O.
+ Cabe destacar que aún existen conflictos entre programas de 32 y 64 bits
+ que no han sido solucionados o en sus versiones previas (en el caso de
+ processing 2.0 de 32 y 64 y processing 2.0 y 1.5).
+ 
+\end_layout
+
+\begin_layout Standard
+Para finalizar, wiimote era una idea factible, pero no para nuestro objetivo
+ final debido a falta de librerias, errores e incompatibilidades con processing
+ referente a diversos S.O.
+ existentes.
+\end_layout
+
+\begin_layout Section
+Bibliografía
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-1"
+
+\end_inset
+
+Greg Borenstein.
+ 
+\shape italic
+Making things see
+\shape default
+, Canada.
+ 
+\shape italic
+Ed.
+ O'Rielly 2010.
+
+\shape default
+ 
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-10"
+
+\end_inset
+
+Casey Reas, Ben Fry.
+ 
+\shape italic
+Gertting started with Processing
+\shape default
+, United States 
+\shape italic
+Ed.
+ O'Rielly 2010.
+
+\shape default
+ 
+\end_layout
+
+\begin_layout Section
+Bibliografía.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-2"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://arduino.cc/es/Tutorial/Invert
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-3"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.instructables.com/id/virtual-graffiti/step6/computer-setup-processing-a
+nd-the-wiimote/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-4"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://blog.jorgeivanmeza.com/2010/12/problemas-para-reproducir-sonidos-en-process
+ing-con-minim-bajo-ubuntu-10-10/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-8"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://blog.jorgeivanmeza.com/2010/12/problemas-para-reproducir-sonidos-en-process
+ing-con-minim-bajo-ubuntu-10-10/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-5"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://www.openprocessing.org/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-6"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://github.com/ddf/Minim
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+key "key-7"
+
+\end_inset
+
+
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://blog.jorgeivanmeza.com/2010/12/utilizar-el-wiimote-con-processing-en-ubuntu
+-10-10/
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
